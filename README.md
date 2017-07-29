@@ -45,4 +45,4 @@ original JQ6500_Serial.
 Uso:
 --------------------------
 
-Abre el ejemplo PlayByNumber_SMT32F1.
+Abre el ejemplo PlayByNumber_HardwareSerial.ino
