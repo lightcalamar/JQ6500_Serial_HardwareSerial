@@ -1,5 +1,5 @@
-JQ6500_Serial_USART2
-=======================
+JQ6500_Serial_HardwareSerial
+============================
 
 Modificación de la libreria JQ6500_Serial para utilizar puerto serie hardware alternativo de las placas STM32
 
@@ -25,22 +25,22 @@ la STM32 al Tx de la JQ6500, además de tener conectado en común el GND. Tener 
 con los niveles lógicos de las señales de 3.3 ó 5v.
 
 Hay que modificar la clase Stream para hacer publico el método timedRead(). Se incluyen archivos
-Stream.h y Stream.cpp, descomprimirlos en la carpeta, sustituyendo a los anteriores:
+Stream.h y Stream.cpp, descomprimirlos en la carpeta, sustituyendo a los anteriores en:
 
-Arduino\hardware\STM32GENERIC\STM32\cores\arduino
+Arduino/hardware/Arduino_STM32\STM32F1/cores/maple/arduino
 
 Llamar al constructor de la clase JQ6500_Serial_USART2, pasando como parámetro el puerto USART de la 
 STM32 que vamos a utilizar, por ejemplo, para usar SerialUART2:
 
-JQ6500_Serial_USART2 mp3(SerialUART2);
+JQ6500_Serial_HardwareSerial mp3(Seria1);
 
 Para usar SerialUART3:
-JQ6500_Serial_USART2 mp3(SerialUART3); //Este puerto serie todavía no ha sido probado
+JQ6500_Serial_HardwareSerial mp3(Serial2); //Este puerto serie todavía no ha sido probado
 
-El resto de métodos de la clase JQ6500_Serial_USART2 se utilizan de la misma forma que la clase
+El resto de métodos de la clase JQ6500_Serial_HardwareSerial se utilizan de la misma forma que la clase
 original JQ6500_Serial.
 
 Uso:
 --------------------------
 
-Abre el ejemplo PlayByNumber_USART2.
+Abre el ejemplo PlayByNumber_SMT32F1.
