@@ -1,7 +1,9 @@
 JQ6500_Serial_HardwareSerial
 ============================
 
-Modificación de la libreria JQ6500_Serial para utilizar puerto serie hardware alternativo de las placas STM32
+Modificación de la libreria JQ6500_Serial para utilizar puerto serie hardware alternativo de las placas STM32F103x con <b>core</b> desde este enlace;  https://drive.google.com/open?id=0BxHMHtN-Pkp0MHl1UFVyYjFOSGM
+
+Solo funciona con placas de la serie <b>STM32F103x</b>
 
 Modificado por RndMnkIII. 27-07-2017
 
@@ -32,9 +34,9 @@ Arduino/hardware/Arduino_STM32\STM32F1/cores/maple/arduino
 Llamar al constructor de la clase JQ6500_Serial_USART2, pasando como parámetro el puerto USART de la 
 STM32 que vamos a utilizar, por ejemplo, para usar SerialUART2:
 
-JQ6500_Serial_HardwareSerial mp3(Seria1);
+JQ6500_Serial_HardwareSerial mp3(Serial1);
 
-Para usar SerialUART3:
+Para usar SerialHardware 3:
 JQ6500_Serial_HardwareSerial mp3(Serial2); //Este puerto serie todavía no ha sido probado
 
 El resto de métodos de la clase JQ6500_Serial_HardwareSerial se utilizan de la misma forma que la clase
